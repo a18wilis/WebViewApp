@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 //donk
@@ -24,9 +25,14 @@ public class MainActivity extends AppCompatActivity {
 
         WebView webView = new WebView(this);
         setContentView(webView);
-        webView.loadUrl("http://wwwlab.iit.his.se/a18wilis/Mobilapplikationsdesign/slutprojekt/index.html");
-    }
 
+        //Fixar så att javascript fungerar
+        WebSettings webSettings = webView.getSettings();
+        webView.getSettings().setJavaScriptEnabled(true);
+
+        //webView.loadUrl("http://wwwlab.iit.his.se/a18wilis/Mobilapplikationsdesign/slutprojekt/index.html");
+        webView.loadUrl("file:///android_asset/about.html");
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
