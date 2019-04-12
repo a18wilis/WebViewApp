@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        //Skapar en WebView som används för att visa sidorna i mobilen.
         WebView webView = new WebView(this);
         setContentView(webView);
 
@@ -30,7 +31,10 @@ public class MainActivity extends AppCompatActivity {
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
 
-        //webView.loadUrl("http://wwwlab.iit.his.se/a18wilis/Mobilapplikationsdesign/slutprojekt/index.html");
+        //Länkar mobilapplikationsprojektet till WebView, vilket gör att den visas i appen.
+        webView.loadUrl("http://wwwlab.iit.his.se/a18wilis/Mobilapplikationsdesign/slutprojekt/index.html");
+
+        //Länkar den lokala asset filen "about.html" till WebView, vilket gör att den visas i appen.
         webView.loadUrl("file:///android_asset/about.html");
     }
     @Override
