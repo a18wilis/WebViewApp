@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Fixar så att javascript fungerar
         WebSettings webSettings = webView.getSettings();
-        webView.getSettings().setJavaScriptEnabled(true);
+        webSettings.setJavaScriptEnabled(true);
 
         //webView.loadUrl("http://wwwlab.iit.his.se/a18wilis/Mobilapplikationsdesign/slutprojekt/index.html");
         webView.loadUrl("file:///android_asset/about.html");
